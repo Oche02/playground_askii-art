@@ -4,6 +4,8 @@ import(
   "fmt"
   "os"
   "strings"
+
+  "playground_askii-art/ascii"
 )
 func main(){
   if len(os.Args) != 2{
