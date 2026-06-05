@@ -7,9 +7,22 @@ import (
 )
 
 func main() {
+	if len(os.Args) != 2 {
+		fmt.Println("expecting: go run . [string]")
+		os.Exit(0)
+	}
+	input := os.Args[1]
+	if input == " " {
+		os.Exit(0)
+	}
+	input = strings.ReplaceAll(input, `\n`, "\n")
+	if input == "\n" {
+		fmt.Print("\n")
+		os.Exit(0)
+	}
 	data, err := os.ReadFile("standard.txt")
 	if err != nil {
-		fmt.Println("Error: failed to read standard text file", err)
+		fmt.Println("failed to read standard file", err)
 		os.Exit(1)
 	}
 	lines := strings.Split(string(data), "\n")
@@ -17,6 +30,6 @@ func main() {
 		if i >= 20 {
 			break
 		}
-		fmt.Printf("Line %d: %q\n", i, line)
+		fmt.Printf("line %d: %q\n", i, line)
 	}
 }
