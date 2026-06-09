@@ -7,19 +7,19 @@ import (
 )
 
 func main() {
-	if len(os.Args) != 2 {
-		fmt.Println("expecting: go run . [string]")
-		os.Exit(0)
-	}
-	input := os.Args[1]
-	if input == " " {
-		os.Exit(0)
-	}
-	input = strings.ReplaceAll(input, `\n`, "\n")
-	if input == "\n" {
-		fmt.Print("\n")
-		os.Exit(0)
-	}
+	// if len(os.Args) != 2 {
+	// 	fmt.Println("expecting: go run . [string]")
+	// 	os.Exit(0)
+	// }
+	// input := os.Args[1]
+	// if input == " " {
+	// 	os.Exit(0)
+	// }
+	// input = strings.ReplaceAll(input, `\n`, "\n")
+	// if input == "\n" {
+	// 	fmt.Print("\n")
+	// 	os.Exit(0)
+	// }
 	data, err := os.ReadFile("standard.txt")
 	if err != nil {
 		fmt.Println("failed to read standard file", err)
