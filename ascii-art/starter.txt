@@ -1,0 +1,7 @@
+### Before students build the ASCII Art project, they need to be comfortable with:
+* Reading data from a file
+* Using maps
+* Error handling
+* String manipulation
+* Loops and slices
+### GET Ready 
